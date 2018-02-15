@@ -1,6 +1,5 @@
 var express     = require("express"),
     bodyParser  = require("body-parser"),
-    cookieParser = require("cookie-parser"),
     app         = express(),
     mongoose    = require("mongoose"),
     Campground  = require("./models/campground"),
@@ -22,7 +21,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(express.static(__dirname +"/public"));
 app.use(methodOverride("_method"));
-app.use(cookieParser('secret'));
 app.use(flash());
 // seedDB(); //Seeding the Database
 
