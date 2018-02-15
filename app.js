@@ -18,7 +18,9 @@ var campRoute    = require("./routes/campground"),
 //Require Routes
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
-mongoose.connect("mongodb://localhost/yelp_camp");
+// mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://Raghav:mummypapa@ds235778.mlab.com:35778/gocamping");
+mongodb://Raghav:mummypapa@ds235778.mlab.com:35778/gocamping
 app.use(express.static(__dirname +"/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
